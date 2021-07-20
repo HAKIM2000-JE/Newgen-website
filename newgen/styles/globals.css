@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base{
+  body{
+    @apply overflow-x-hidden  bg-scroll
+  
+
+  }
+
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 300px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #7b79eb;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3E417B;
+  border-radius: 5px;
+}
+
+
+
+.slider {
+    width: 2179px;
+   
+    overflow: visible;
+    margin-top: 50px;
+}
+.slider ul {
+    display: flex;
+    padding: 0;
+    animation: cambio 10s infinite linear;
+    background-color: #f7f8fb;
+    height: 100px;
+   
+}
+.slider li {
+
+    padding: 10px;
+    list-style: none;
+    margin-top: 30px;
+}
+.slider img {
+    width: 80px;
+     height: 50px;
+  
+}
+
+@keyframes cambio {
+    from {margin-left: 0%}
+    to {margin-left: -50%}
+}
+

@@ -6,6 +6,16 @@ module.exports = {
         extend: {
             screens: {
                 "3x": "2000px"
+            },
+            zIndex: {
+                '0': -2,
+                 '10':-1,
+                
+                
+            }, fontSize: {
+                
+                '6xl': '4rem',
+                
             }
         },
     },

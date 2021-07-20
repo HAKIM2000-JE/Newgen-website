@@ -1,14 +1,14 @@
 import Image from "next/image"
+import Link from "next/link"
 
 
-
-function Navbar() {
+function Navbar({background}) {
     return (
         <div>
             
 
            
-            <nav className="bg-transparent ">
+            <nav className={`bg-${background}`}>
             
                 <div className="container mx-auto ">
                     <div className="sm:flex justify-around " >
@@ -19,7 +19,10 @@ function Navbar() {
                         
                         <ul className="text-gray-400 sm:self-center text-base border-t sm:border-none ">
                             <li className="sm:inline-block ">
-                                <a href="#" className="p-3 text-white">Home</a>
+                              <Link href="/" >
+                                    <a href="#" className="p-3 text-white">Home</a>
+                              </Link>
+                                
                             </li>
                             <li className="sm:inline-block">
                                 <a href="#" className="p-3 hover:text-white">Product</a>

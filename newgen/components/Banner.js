@@ -1,19 +1,36 @@
 
 import Image from "next/image"
 import Navbar from "./Navbar"
-function Banner() {
+
+import Rotate from 'react-reveal/Rotate';
+
+import { AiOutlineDown } from 'react-icons/ai';
+function Banner({source , size , text , font , navbar , color}) {
+    console.log(source)
+     console.log(font)
     return (
-        <div className=" bg-center bg-no-repeat h-screen w-screen "
-            style={{ background: 'url("https://i.ibb.co/5WR8Nnm/3-D-earth-graphic-symbolizing-global-trade-vector-illustration.jpg") ', backgroundSize: 'cover' , backgroundRepeat:'no-repeat'}}>
+
+     
+        <div className=" bg-center bg-no-repeat h-screen w-screen  z-0 bg-opacity-0 mx-auto"
+            style={{ background: `url("${source}") `, backgroundSize: `${size}` , backgroundRepeat:'no-repeat'}}>
         
-            <Navbar/>
+            <Navbar background={navbar} />
 
-            <h1 className="text-6xl text-white mt-60 ml-44 font-bold">NEW  VISION  <br/>  NEW FUTURE</h1>
+            <Rotate bottom left duration={2500}>
+                <h1 className={`${font} w-4/12 ${color} mt-60 ml-44 font-bold  z-40`} > {text} </h1>
+            </Rotate>
+
+           
 
 
-            <div className="flex ml-44 mt-40 ">
-                <button className="bg-white px-4  py-2 text-blue-900 font-bold mr-5 rounded-lg">GET IN TOUCH</button>
-                <button className="border-2 border-white px-4  py-2 text-white font-bold  rounded-lg">VIEW DEMO</button>
+            <div className="flex ml-44 mt-40 z-40">
+                <button className="bg-white border-2 px-4  py-2 text-blue-900 font-bold mr-5 rounded-lg hover:bg-transparent hover:text-white hover:border-white ">COMMENCER</button>
+                <button className="border-2 border-white px-4  py-2 text-white font-bold  rounded-lg  hover:bg-blue-900 ">VOIR DEMO</button>
+            </div>
+
+            <div className="w-screen grid place-items-center text-5xl mt-14 animate-bounce text-white">
+               <AiOutlineDown className={`${color}`} />
+              
             </div>
            
             

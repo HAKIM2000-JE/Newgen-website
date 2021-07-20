@@ -1,0 +1,99 @@
+.scroll_container,
+.scroll_area {
+  width: 100vw;
+  height: 100vh;
+  font-size: 60px;
+  overflow-x: hidden;
+}
+
+
+
+
+.scroll_container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+.scroll_area {
+  scroll-snap-align: start;
+}
+
+.scroll_container,
+.scroll_area {
+  margin: 0 auto;
+}
+
+.scroll_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.scroll_area>h2{
+  -webkit-text-fill-color: transparent;
+}
+
+.scroll_area:nth-of-type(1) {
+  background: #2c0461;
+}
+
+.scroll_area:nth-of-type(2) {
+  background: #000;
+}
+
+.scroll_area:nth-of-type(3) {
+  background: #1c3a27;
+}
+
+.scroll_area:nth-of-type(4) {
+  background: #3E417B;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+
+
+.Tabs {
+  height: 100%;
+  display: flex;
+}
+
+.TabPanel.is-active {
+  display: block;
+}
+
+.TabList {
+  width: 10rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  
+}
+
+
+
+
+.Button {
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3E417B;
+}
+.Button:focus,
+.Button:hover {
+  outline: 0;
+  
+}
+.Tab.is-active .Button {
+   border-right: 2px solid #3E417B ;
+}

@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap");
+
+$primary-color: #003c71;
+$secondary-color: #fff;
+
+
+
+
+.process {
+  $bem-block: &;
+
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+
+  &__item {
+    user-select: none;
+    text-align: center;
+    position: relative;
+    padding: 15px 35px;
+    transition: 0.4s ease-in-out;
+
+    &:hover {
+      background: darken($secondary-color, 5%);
+    }
+
+    &:hover #{$bem-block}__number {
+      transform: translateY(5px);
+      color: $primary-color;
+    }
+  }
+
+  &__number {
+    font-size: 90px;
+    -webkit-text-stroke: 1px $primary-color;
+    display: block;
+    color: transparent;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    transition: 0.4s ease-in-out;
+  }
+
+  &__title {
+    display: block;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 35px;
+    color: $primary-color;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    display: block;
+    font-family: "Josefin Slab";
+    font-size: 20px;
+    color: darken($secondary-color, 45%);
+    margin-top: 30px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .process {
+    display: inline-block;
+
+    &__item {
+      width: 49%;
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .process {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__item {
+      width: 100%;
+
+      &:not(:last-of-type) {
+        &::after {
+          content: "";
+          width: 1px;
+          height: 75%;
+          background: darken($secondary-color, 45%);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          opacity: 0.2;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
